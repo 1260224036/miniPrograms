@@ -1,0 +1,37 @@
+/* components/header/header.wxss */
+.main{
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  background: white
+}
+
+.logo{
+  flex: 7
+}
+
+.search{
+  flex: 1;
+  display: flex;
+  justify-content:center;
+  align-items:center
+}
+
+.user{
+  flex: 2;
+  display: flex;
+  justify-content:center;
+  align-items:center
+}
+
+.down{
+  flex: 3;
+  font-size: 30rpx;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background: pink;
+  color: white;
+  border-radius: 10rpx;
+  padding: 10rpx
+}

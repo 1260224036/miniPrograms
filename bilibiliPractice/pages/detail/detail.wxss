@@ -1,0 +1,88 @@
+/* pages/detail/detail.wxss */
+.main{
+  padding: 10rpx;
+  color: #666;
+}
+
+.videoInfo{
+  margin-top: 10rpx;
+}
+
+.videoInfo video{
+  width: 100%;
+}
+
+.videoInfo .videoTitle{
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+}
+
+.videoInfo .videoDetailInfo{
+  margin-top:5rpx;
+  font-size: 28rpx; 
+}
+
+.videoInfo .videoDetailInfo text{
+  margin-left: 15rpx;
+}
+
+.videoInfo .videoDetailInfo .author{
+  color: #000;
+}
+.videoInfo .videoDetailInfo .playCount{}
+.videoInfo .videoDetailInfo .commentCount{}
+.videoInfo .videoDetailInfo .date{}
+
+.othersVideo{
+  margin-top:15rpx;
+}
+
+.othersVideo .othersVideoItem{
+  margin-bottom:15rpx;
+}
+
+.othersVideo .othersVideoWrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.othersVideoWrap .othersVideoImg{
+  width: 375rpx;
+}
+.othersVideoWrap .othersVideoImg image{
+  width: 100%;
+  border-radius: 15rpx;
+}
+
+.othersVideoWrap .othersVideoDesc{
+  padding: 15rpx;
+  width: 375rpx;
+  position: relative;
+}
+
+.othersVideoWrap .othersVideoDesc .othersVideoTitle{
+  font-size: 35rpx;
+
+  display:-webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.othersVideoWrap .othersVideoDesc .othersVideoPlayCount{
+  font-size: 30rpx;
+  position: absolute;
+  left: 15rpx;
+  bottom: 15rpx;
+}
+.othersVideoWrap .othersVideoDesc .othersVideoCommentCount{
+  font-size: 30rpx;
+  position: absolute;
+  right: 15rpx;
+  bottom: 15rpx;
+}
+
+

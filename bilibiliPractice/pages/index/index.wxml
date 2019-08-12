@@ -1,0 +1,50 @@
+<view class="iMain">  
+  <header/>
+  <!--导航-->
+  <view class="navWarp">
+    <scroll-view class="nav" scroll-x >
+      <view  class="navItem {{index===currentNavIndex?'active':''}}" wx:for="{{navList}}" data-index="{{index}}" wx:key="index" bindtap="setCurrentNav">
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+  <!--轮播图-->
+  <view class="slide">
+    <swiper autoplay circular indicator-dots interval="3000">
+      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}" >
+        <navigator>
+          <image src="{{item.imgSrc}}"  mode="widthFix"/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--视频区-->
+  <view class="videoWarp">
+    <navigator url="../detail/detail?id={{item.id}}" class="videoItem" wx:for="{{videosList}}" wx:key="{{index}}">
+      <!--图片容器-->
+      <view class="videoImg">
+        <image src="{{item.imgSrc}}" mode="widthFix"/>
+        <!--视频信息-->
+        <view class="videoInfo">
+          <view class="playCountWrap">
+            <!--图标-->
+            <text class="fa fa-play-circle-o"></text>
+            <!--数值-->
+            <text class="playCount">{{item.playCount}}</text>
+          </view>
+        <!--评论信息-->
+          <view class="commentCountRow">
+            <!--图标-->
+            <text class="fa fa-commenting-o"></text>
+            <!--数值-->
+            <text class="commentCount">{{item.commentCount}}</text>
+          </view>
+        </view>
+      </view>
+      <!--标题-->
+      <view class="videoDesc">
+        {{item.desc}}
+      </view>
+    </navigator>
+  </view>
+</view>

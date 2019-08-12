@@ -1,0 +1,42 @@
+<view class="main">
+  <header/>
+  <view class="videoInfo">
+    <video src="{{videoInfo.videoSrc}}" controls></video>
+    <view class="videoTitle">
+      <text>{{videoInfo.videoTitle}}</text>
+      <text class="fa fa-angle-down"></text>
+    </view>
+    <view class="videoDetailInfo">
+      <text class="author">{{videoInfo.author}}</text>
+      <text class="playCount">{{videoInfo.playCount}}</text>
+      <text class="commentCount">{{videoInfo.commentCount}}弹幕</text>  
+      <text class="date">{{videoInfo.date}}</text>  
+    </view>
+  </view>
+  <!--推荐视频-->
+  <view class="othersVideo">
+    <navigator  class="othersVideoItem" wx:for="{{othersList}}" wx:key="{{index}}">
+      <!--图片区-->
+      <view class="othersVideoWrap">
+        <view class="othersVideoImg">
+          <image src="{{item.imgSrc}}" mode="widthFix"/>
+        </view>      
+        <!--描述区-->
+        <view class="othersVideoDesc">
+          <!--title-->
+          <view class="othersVideoTitle">
+          {{item.title}}
+          </view>
+          <!--播放量-->
+          <text class="othersVideoPlayCount">
+            {{item.playMsg}}播放
+          </text>
+          <!--评论-->
+          <text class="othersVideoCommentCount">
+            {{item.commentCount}}弹幕
+          </text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
