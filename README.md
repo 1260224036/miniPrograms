@@ -1,4 +1,3 @@
 # miniPrograms
-miniPrograms
-some miniPrograms practice
-1.bilibili
+## some miniPrograms practice
+* 1.bilibili
